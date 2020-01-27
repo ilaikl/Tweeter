@@ -7,7 +7,7 @@ const Tweeter = function () {
 
 
     const getPosts = function () {
-        console.log(_posts)
+        //console.log(_posts)
         return _posts
     }
     const addPost = function (text) {

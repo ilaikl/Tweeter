@@ -21,4 +21,26 @@ const postFunc = function () {
     renderer.renderPosts(tweeter.getPosts())
 }
 
+$("#posts").on("click", ".post-comment", function () {
+
+    tweeter.addComment($(this).siblings('.comment-input').val(), $(this).closest(".post").data().id)
+
+    renderer.renderPosts(tweeter.getPosts())
+});
+
+$("#posts").on("click", ".delete", function () {
+
+    tweeter.removePost($(this).closest(".post").data().id)
+
+    renderer.renderPosts(tweeter.getPosts())
+});
+
+$("#posts").on("click", ".delete-comment", function () {
+
+    tweeter.removeComment($(this).closest(".post").data().id,$(this).closest(".comments").data().id)
+
+    renderer.renderPosts(tweeter.getPosts())
+});
+
+
 renderer.renderPosts(tweeter.getPosts())
