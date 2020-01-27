@@ -17,7 +17,7 @@ tweeter.addComment("Second the best!", "p2")
 console.log(tweeter.getPosts())
 
 const postFunc = function () {
-
+    tweeter.addPost($("#input").val())
     renderer.renderPosts(tweeter.getPosts())
 }
 
