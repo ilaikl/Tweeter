@@ -7,6 +7,7 @@ const Tweeter = function () {
 
 
     const getPosts = function () {
+        console.log(_posts)
         return _posts
     }
     const addPost = function (text) {
@@ -39,19 +40,3 @@ const Tweeter = function () {
         getPosts, addPost, removePost, addComment, removeComment
     }
 }
-
-const tweeter = Tweeter()
-
-tweeter.addPost("This is my own post!")
-tweeter.addPost("wwewwt!")
-tweeter.addPost("fffffffffffff!")
-tweeter.addPost("eeeeeeeeeeeee!")
-tweeter.addPost("rrrrrrrrrrr!")
-tweeter.addPost("qqqqqqqqqq!")
-tweeter.removePost("p1")
-
-tweeter.addComment("Damn straight it is!", "p3")
-tweeter.addComment("Second the best!", "p2")
-
-tweeter.removeComment("p2", "c1")
- console.log(tweeter.getPosts())
